@@ -4,31 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grocery Mart</title>
-
-    <!-- Favicon link -->
-    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets./asssets/favicon/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./asssets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./asssets/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./asssets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
     <!-- Fonts -->
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
-
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/main.css" />
-
     <!-- Scripts -->
     <script src="./assets/js/scripts.js"></script>
   </head>
-
   <body>
     <!-- Header -->
     <header id="header" class="header"></header>
     <script>
       load("#header", "./templates/header.html");
     </script>
-
     <div class="container">
       <!-- Slideshow -->
       <div class="slideshow">
@@ -36,23 +42,20 @@
           <div class="slideshow__item">
             <a href="#!" class="slideshow__link">
               <picture>
-                <source media="(max-width: 767.98px)" srcset="./assets/img/slideshow/item-1-md.png" type="image/webp" />
+                <source media="(max-width: 767.98px)" srcset="./assets/img/slideshow/item-1-md.png" />
                 <img src="./assets/img/slideshow/item-1.png" alt="" class="slideshow__img" />
               </picture>
             </a>
           </div>
         </div>
-
         <div class="slideshow__page">
           <span class="slideshow__num">1</span>
           <span class="slideshow__slider"></span>
           <span class="slideshow__num">5</span>
         </div>
       </div>
-
       <!-- Footer -->
       <footer id="footer"></footer>
-
       <script>
         load("#footer", "./templates/footer.html");
       </script>
