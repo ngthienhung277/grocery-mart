@@ -1,14 +1,10 @@
 *,
-::after,
-::before {
+::before,
+::after {
   box-sizing: border-box;
 }
 
-* {
-  -webkit-tap-highlight-color: transparent;
-}
-
-.html {
+html {
   font-size: 62.5%;
 }
 
@@ -28,6 +24,8 @@ button {
   border: none;
   outline: none;
   background: transparent;
+  padding: 0;
+  cursor: pointer;
 }
 
 a,

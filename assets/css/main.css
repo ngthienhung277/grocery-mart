@@ -7,13 +7,6 @@ html.dark {
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
   --top-act-group-separate: #ededf6;
-}
-@media (max-width: 991.98px) {
-  html.dark {
-    --header-shadow-color: rgba(0, 0, 0, 0.2);
-  }
-}
-html.dark :root {
   --dropdown-bg-color: #2f3441;
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
   --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(27%) saturate(487%) hue-rotate(185deg)
@@ -27,6 +20,11 @@ html.dark :root {
   --cate-item-thumb-bg: #292e39;
   --cate-item-title-color: #fff;
 }
+@media (max-width: 991.98px) {
+  html.dark {
+    --header-shadow-color: rgba(0, 0, 0, 0.2);
+  }
+}
 
 html {
   --text-color: #1a162e;
@@ -37,15 +35,6 @@ html {
   --top-act-group-bg-color: #fff;
   --top-act-group-shadow: rgba(237, 237, 246, 0.2);
   --top-act-group-separate: #ededf6;
-}
-@media (max-width: 991.98px) {
-  html {
-    --header-bg-color: #fff;
-    --header-shadow-color: rgba(237, 237, 246, 0.2);
-  }
-}
-
-:root {
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
   --top-menu-border-color: #d2d1d6;
@@ -55,9 +44,15 @@ html {
   --cate-item-thumb-bg: #fff;
   --cate-item-title-color: #000;
 }
+@media (max-width: 991.98px) {
+  html {
+    --header-bg-color: #fff;
+    --header-shadow-color: rgba(237, 237, 246, 0.2);
+  }
+}
 @media (max-width: 767.98px) {
-  :root {
-    -cate-item-bg: #fff;
+  html {
+    --cate-item-bg: #fff;
   }
 }
 
@@ -149,8 +144,8 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font: inherit;
   font-size: 100%;
+  font: inherit;
   vertical-align: baseline;
 }
 
@@ -197,16 +192,12 @@ table {
 }
 
 *,
-::after,
-::before {
+::before,
+::after {
   box-sizing: border-box;
 }
 
-* {
-  -webkit-tap-highlight-color: transparent;
-}
-
-.html {
+html {
   font-size: 62.5%;
 }
 
@@ -226,6 +217,8 @@ button {
   border: none;
   outline: none;
   background: transparent;
+  padding: 0;
+  cursor: pointer;
 }
 
 a,
@@ -1673,13 +1666,12 @@ select {
 
 .top-menu {
   --main-column-width: 292px;
-  --main-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+  --max-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
   position: relative;
 }
 .top-menu__main {
   width: var(--main-column-width);
-  height: var(--main-inner-height);
-  height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+  height: var(--max-inner-height);
   border-right: 1px solid var(--top-menu-border-color);
   overflow-y: auto;
 }

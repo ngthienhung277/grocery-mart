@@ -53,14 +53,13 @@
 
 .top-menu {
   --main-column-width: 292px;
-  --main-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+  --max-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
 
   position: relative;
 
   &__main {
     width: var(--main-column-width);
-    height: var(--main-inner-height);
-    height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+    height: var(--max-inner-height);
     border-right: 1px solid var(--top-menu-border-color);
     overflow-y: auto;
 
@@ -188,7 +187,6 @@
 
     @include abstracts.screen(lg) {
       grid-template-columns: 1fr;
-
       height: auto;
     }
   }
