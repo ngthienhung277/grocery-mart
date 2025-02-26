@@ -2,18 +2,18 @@ html.dark {
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%)
     contrast(99%);
+  --menu-column-icon-color: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(527%) hue-rotate(180deg)
+    brightness(107%) contrast(96%);
   --body-bg: #292e39;
   --header-bg-color: #171c28;
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
   --top-act-group-separate: #ededf6;
+  --top-menu-border-color: #171c28;
   --dropdown-bg-color: #2f3441;
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
   --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(27%) saturate(487%) hue-rotate(185deg)
     brightness(89%) contrast(88%);
-  --top-menu-border-color: #171c28;
-  --menu-column-icon-color: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(527%) hue-rotate(180deg)
-    brightness(107%) contrast(96%);
   --sidebar-bg: #292e39;
   --sidebar-shadow: rgba(23, 28, 40, 0.4);
   --cate-item-bg: #171c28;
@@ -238,9 +238,11 @@ button,
 input,
 textarea,
 select {
+  padding: 0;
   font-family: inherit;
   color: inherit;
   outline: none;
+  border: none;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -2104,17 +2106,38 @@ select {
 .filter__form-slider::after {
   left: var(--max-value);
 }
-.filter__form-input, .filter__form-select-wrap {
+.filter__form-text-input, .filter__form-select-wrap {
   border-radius: 6px;
   border: 1px solid #d2d1d6;
 }
-.filter__form-input {
+.filter__form-text-input {
+  display: flex;
+  align-items: center;
+  width: 334px;
+  height: 44px;
+  padding: 0 16px;
+  overflow: hidden;
+}
+.filter__form-text-input--small {
   width: 121px;
   height: 36px;
   padding: 0 12px;
+}
+.filter__form-text-input--small .filter__form-input {
   font-size: 1.4rem;
-  line-height: 500;
-  line-height: 142.857%;
+}
+.filter__form-input {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.filter__form-input::placeholder {
+  color: #9e9da8;
+  font-weight: 400;
+}
+.filter__form-input-icon {
+  margin-left: 12px;
 }
 .filter__form-select-wrap {
   display: flex;
