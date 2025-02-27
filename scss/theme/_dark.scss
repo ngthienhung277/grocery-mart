@@ -7,6 +7,9 @@ html.dark {
     contrast(99%);
   --body-bg: #292e39;
   --header-bg-color: #171c28;
+  --footer-bg-color: var(--header-bg-color);
+  --footer-text-color: #9e9da6;
+  
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
   --top-act-group-separate: #ededf6;
@@ -25,8 +28,8 @@ html.dark {
   --sidebar-shadow: rgba(23, 28, 40, 0.4);
 
   // Category item
-  --cate-item-bg: #171c28;
   --cate-item-thumb-bg: #292e39;
+  --cate-item-bg: #171c28;
   --cate-item-title-color: #fff;
 
   // Buttons
