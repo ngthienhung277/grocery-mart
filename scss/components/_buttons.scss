@@ -43,6 +43,9 @@
 
 //Buttons
 .btn {
+  display: flex;
+  align-items: center;
+
   height: 46px;
   padding: 0 20px;
   border-radius: 6px;
@@ -71,13 +74,13 @@
     }
   }
 
-  &--outline{
+  &--outline {
     background: transparent;
     border: 1px solid #d2d1d6;
   }
 
   &--rounded {
-    border-radius:  99px;
+    border-radius: 99px;
   }
 
   &[disabled],
@@ -89,7 +92,7 @@
   &--active {
     background: #f5c62e;
     color: white;
-  } 
+  }
 
   &:hover {
     opacity: 0.9;
