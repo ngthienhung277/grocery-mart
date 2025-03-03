@@ -2727,6 +2727,7 @@ input {
   bottom: 50px;
 }
 .auth__intro-img {
+  width: var(--width);
   max-width: 100%;
 }
 .auth__intro-text {
@@ -2797,9 +2798,15 @@ input {
     font-size: 1.4rem;
   }
 }
+.auth__message {
+  margin-top: 30px;
+}
 .auth__form {
   width: 100%;
   margin-top: 30px;
+}
+.auth__form-forgot {
+  margin-top: 10px;
 }
 @media (max-width: 767.98px) {
   .auth__form {
