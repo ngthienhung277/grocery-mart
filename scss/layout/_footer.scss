@@ -1,7 +1,6 @@
 @use "../abstracts";
 
 .footer {
-    margin-top: 50px;
     padding: 50px 0;
     font-size: 1.4rem;
     background: var(--footer-bg-color);
@@ -95,6 +94,7 @@
         padding: 8px 12px;
         border-radius: 6px;
         border: 2px solid #d2d1d6;
+        font-size: 1.5rem;
         font-weight: 500;
 
         &::placeholder {
@@ -111,6 +111,7 @@
         }
 
         @include abstracts.screen(sm) {
+            flex: 1;
         }
     }
 
@@ -125,6 +126,7 @@
             gap: 50px;
         }
     }
+
     &__socials {
         display: flex;
         align-items: center;
@@ -144,7 +146,7 @@
         transition: translate, filter;
         transition-duration: 0.3s;
 
-        @include abstracts.screen(md) {
+        @include abstracts.screen(sm) {
             width: 42px;
             height: 42px;
         }
@@ -180,8 +182,8 @@
         filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%)
             contrast(99%);
 
-            @include abstracts.screen(sm) {
-                width: 18px;
-            }
+        @include abstracts.screen(sm) {
+            width: 18px;
+        }
     }
 }
