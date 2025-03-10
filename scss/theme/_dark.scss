@@ -1,10 +1,10 @@
 @use "../abstracts";
 
 html.dark {
-  // Text & Colors
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%)
     contrast(99%);
+
   --body-bg: #292e39;
   --header-bg-color: #171c28;
   --footer-bg-color: var(--header-bg-color);
@@ -13,7 +13,10 @@ html.dark {
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
   --top-act-group-separate: #ededf6;
-  --top-menu-border-color: #171c28;
+
+  @include abstracts.screen(lg) {
+    --header-shadow-color: rgba(0, 0, 0, 0.2);
+  }
 
   // Header
   --header-act-dropdown-bg: #2f3441;
@@ -25,6 +28,7 @@ html.dark {
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
   --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(27%) saturate(487%) hue-rotate(185deg)
     brightness(89%) contrast(88%);
+  --top-menu-border-color: #171c28;
   --menu-column-icon-color: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(527%) hue-rotate(180deg)
     brightness(107%) contrast(96%);
 
@@ -33,8 +37,8 @@ html.dark {
   --sidebar-shadow: rgba(23, 28, 40, 0.4);
 
   // Category item
-  --cate-item-thumb-bg: #292e39;
   --cate-item-bg: #171c28;
+  --cate-item-thumb-bg: #292e39;
   --cate-item-title-color: #fff;
 
   // Buttons
@@ -77,10 +81,10 @@ html.dark {
   --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
 
   @include abstracts.screen(md) {
-    --bread-crumbs-bg: #171c28;
+    --breadcrumbs-bg: #171c28;
   }
 
-  //Search bar
+  // Search bar
   --search-bar-bg: #171c28;
 
   // Review card
@@ -88,4 +92,11 @@ html.dark {
 
   // Text content
   --text-content-hr-bg: #3e4043;
+
+  // Checkout
+  --checkout-breadcrumbs-bg: #171c28;
+  --checkout-cart-info-bg: #171c28;
+  --checkout-cart-info-shadow: rgba(23, 28, 40, 0.2);
+  --checkout-border-color: #292e39;
+  --checkout-gift-shadow: rgba(23, 28, 40, 0.2);
 }
