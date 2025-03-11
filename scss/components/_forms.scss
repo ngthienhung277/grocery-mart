@@ -1,63 +1,115 @@
 @use "../abstracts";
+
 $error-color: #ed4337;
+
 .form {
     &:has(:invalid) &__submit-btn {
         opacity: 0.5;
         pointer-events: none;
     }
+
+    &__row {
+        display: flex;
+        gap: 30px;
+
+        > * {
+            flex: 1;
+        }
+    }
+
     &__group {
         margin-top: 30px;
+
         @include abstracts.screen(md) {
             margin-top: 20px;
         }
+
         &--inline {
             display: flex;
             align-items: center;
         }
     }
+
     &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
         .form__text-input {
             border-color: $error-color;
             background: rgba($color: $error-color, $alpha: 0.1);
         }
+
         .form__error,
         .form__input-icon-error {
             display: block;
         }
+
         .form__input-icon {
             display: none;
         }
     }
+
+    &__text-area,
     &__text-input {
         display: flex;
         align-items: center;
-        height: 50px;
+
         padding: 0 12px;
         border-radius: 10px;
         border: 1.5px solid #d2d1d6;
+
+        &--small {
+            border-radius: 8px;
+        }
+
         &:focus-within {
             border-color: #77dae6;
         }
+    }
+
+    &__text-area {
+        height: 100px;
+        padding: 12px;
+
+        &-input {
+            width: 100%;
+            resize: none;
+        }
+    }
+
+    &__text-input {
+        height: 50px;
+
+        &--small {
+            height: 42px;
+        }
+
         @include abstracts.screen(md) {
             height: 48px;
         }
     }
-    &__input {
+
+    &__input,
+    &__text-area-input {
         flex: 1;
         height: 100%;
+
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 144.444%;
-        &-icon {
-            margin-left: 12px;
-        }
+
         &::placeholder {
             color: var(--form-placeholder-color);
         }
+
         @include abstracts.screen(md) {
             font-size: 1.6rem;
         }
     }
+
+    &__input {
+        &-icon {
+            margin-left: 12px;
+        }
+    }
+
     &__error {
         text-align: left;
         font-size: 1.4rem;
@@ -66,34 +118,42 @@ $error-color: #ed4337;
         color: $error-color;
         display: none;
     }
+
     &__input-icon-error {
         display: none;
         margin-left: 12px;
         animation: shake 0.5s;
     }
+
     &__pull-right {
         margin-left: auto;
     }
+
     &__checkbox {
         position: relative;
+
         display: flex;
         align-items: center;
         user-select: none;
+
         &-label {
             margin-left: 29px;
             color: #9e9da8;
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 146.667%;
+
             @include abstracts.screen(md) {
                 font-size: 1.4rem;
             }
         }
+
         &::before,
         &::after {
             content: "";
             position: absolute;
         }
+
         &::before {
             width: 19px;
             height: 19px;
@@ -101,11 +161,13 @@ $error-color: #ed4337;
             border: 1.5px solid #9e9da8;
         }
     }
+
     &__checkbox:has(:checked) {
         &::before {
             border-color: #ffb700;
             background: #ffb700;
         }
+
         &::after {
             width: 15px;
             height: 8px;
@@ -113,7 +175,7 @@ $error-color: #ed4337;
             border-color: transparent transparent #fff #fff;
             rotate: -45deg;
             left: 2px;
-            top: 5px;
+            top: 4px;
         }
     }
 
