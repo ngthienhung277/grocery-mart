@@ -90,6 +90,11 @@
   &--rounded {
     border-radius: 99px;
   }
+  
+  &--danger {
+    color: #fff;
+    background: #ed4337;
+  }
 
   &[disabled],
   &--disabled {
