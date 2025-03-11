@@ -64,12 +64,9 @@ html {
 
   // Forms
   --forms-placeholder-color: #d2d1d6;
-
-  // Product detail
-  --product-detail-bg: #fff;
-  --product-detail-info-bg: #f6f6f6;
-  --product-detail-info-content-bg: #fff;
-  --product-detail-tag-bg: #ededf6;
+  --form-select-dialog-shadow: rgba($color: #000000, $alpha: 0.15);
+  --form-select-dialog-bg: #fff;
+  --form-option-hover-bg: #ebebeb;
 
   @include abstracts.screen(md) {
     --product-detail-bg: #fafafd;
@@ -106,5 +103,5 @@ html {
 
   // Dialog
   --dialog-bg: #fff;
-  --dialog-shadow: rgba(237, 237, 246, 0.2); 
+  --dialog-shadow: rgba(237, 237, 246, 0.2);
 }
