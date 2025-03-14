@@ -36,7 +36,17 @@
         gap: 30px;
     }
 
+    &__back-arrow {
+        width: 50px;
+        padding-right: 20px;
+        position: relative;
+        top: 4px;
+    }
+
     &__heading {
+        display: flex;
+        align-items: center;
+
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 141.667%;
@@ -181,6 +191,7 @@
         }
     }
 }
+// End .cart-info
 
 .cart-info + .cart-info {
     margin-top: 30px;
@@ -263,6 +274,7 @@
     &__status {
         color: #67b044;
     }
+
     &__ctrl-wrap {
         display: flex;
         align-items: center;
@@ -340,12 +352,13 @@
 
     &__checkout-btn {
         margin-top: auto;
-    }
 
-    @include abstracts.screen(md) {
-        max-width: 200px;
+        @include abstracts.screen(md) {
+            max-width: 200px;
+        }
     }
 }
+// End .cart-item
 
 .gift-item {
     display: flex;
