@@ -8,7 +8,7 @@ html.dark {
   --footer-text-color: #9e9da6;
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
-  --top-act-group-separate: #ededf6;
+  --top-act-group-separate: #545458;
   --header-act-dropdown-bg: #2f3441;
   --header-act-dropdown-shadow: rgba(23, 28, 40, 0.4);
   --header-act-dropdown-border-color: #171c28;
@@ -1543,7 +1543,7 @@ strong {
 .top-bar {
   position: relative;
   z-index: 1;
-  padding: 30px 0;
+  padding: 2cap 0;
 }
 @media (max-width: 991.98px) {
   .top-bar {
@@ -2303,7 +2303,7 @@ strong {
   position: relative;
   flex-shrink: 0;
   width: 100%;
-  padding-top: 34%;
+  padding-top: 26%;
 }
 @media (max-width: 767.98px) {
   .slideshow__item {
@@ -2375,7 +2375,7 @@ strong {
   display: flex;
   gap: 20px;
   height: 100%;
-  padding: 20px 26px;
+  padding: 20px;
   border-radius: 16px;
   background: var(--cate-item-bg);
 }
@@ -2391,8 +2391,8 @@ strong {
 }
 .cate-item__thumb {
   display: block;
-  width: 116px;
-  height: 116px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   border-radius: 8px;
   background: var(--cate-item-thumb-bg);
@@ -2829,7 +2829,7 @@ strong {
 }
 .form__text-input {
   position: relative;
-  height: 50px;
+  height: 48px;
 }
 .form__text-input--small {
   height: 42px;
